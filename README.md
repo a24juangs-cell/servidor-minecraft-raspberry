@@ -7,7 +7,7 @@ Este proyecto consiste en un servidor de Minecraft configurado en una Raspberry 
 
 ---
 
-## 📘 Manual de usuario
+##  Manual de usuario
 
 
 ### 1. Contenido del producto
@@ -119,7 +119,7 @@ En caso de problemas técnicos, se recomienda contactar con el proveedor del ser
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
 Juan Gerardo González Santos
 
