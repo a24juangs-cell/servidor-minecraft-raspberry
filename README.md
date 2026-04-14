@@ -227,7 +227,7 @@ Puertos de la Raspberry
 
 Como ingresar al router
 
-![Configuración del router](images/ingresar_router.jpg)
+![Configuración del router](images/login_zte.png)
 
 ##  Autor
 
