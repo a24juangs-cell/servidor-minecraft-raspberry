@@ -216,9 +216,9 @@ En caso de problemas técnicos, se recomienda contactar con el proveedor del ser
 ---
 10. ## 🖼️ Ejemplos visuales
 
-![Añadir servidor en Minecraft](images/agregarservidor.png)
+![Añadir servidor en Minecraft](images/agregar_servidor.png)
 
-![Configuración del router](images/raspberrypuertosytodo.png)
+![Configuración del router](images/raspberry_puertos.png)
 
 
 ##  Autor
