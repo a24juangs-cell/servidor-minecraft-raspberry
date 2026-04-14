@@ -216,7 +216,12 @@ En caso de problemas técnicos, se recomienda contactar con el proveedor del ser
 ---
 10. ## 🖼️ Ejemplos visuales
 
+Como agregar el servidor Minecraft
+
 ![Añadir servidor en Minecraft](images/agregar_servidor.png)
+
+
+Puertos de la Raspberry
 
 ![Configuración del router](images/raspberry_puertos.png)
 
