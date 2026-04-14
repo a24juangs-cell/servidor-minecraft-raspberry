@@ -214,6 +214,12 @@ Para mantener el servidor en buen estado:
 En caso de problemas técnicos, se recomienda contactar con el proveedor del servidor.
 
 ---
+10. ## 🖼️ Ejemplos visuales
+
+![Añadir servidor en Minecraft](images/agregarservidor.png)
+
+![Configuración del router](images/raspberrypuertosytodo.png)
+
 
 ##  Autor
 
