@@ -218,13 +218,16 @@ En caso de problemas técnicos, se recomienda contactar con el proveedor del ser
 
 Como agregar el servidor Minecraft
 
-![Añadir servidor en Minecraft](images/agregar_servidor.png)
+![Añadir servidor en Minecraft](images/agregar_servidores.png)
 
 
 Puertos de la Raspberry
 
-![Configuración del router](images/raspberry_puertos.png)
+![Configuración del router](images/raspberry_puertos_nombrados.png)
 
+Como ingresar al router
+
+![Configuración del router](images/ingresar_router.jpg)
 
 ##  Autor
 
