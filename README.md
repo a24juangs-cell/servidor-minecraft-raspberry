@@ -26,7 +26,7 @@ El servidor ya viene listo para funcionar, por lo que no es necesario instalar n
 ### 2. Puesta en marcha
 En esta sección se describen los pasos que debes seguir para preparar tu entorno doméstico e instalar las herramientas necesarias en tu ordenador antes de proceder a iniciar el servidor o conectarte al juego.
 
-Nota para el lector: Este documento funciona exclusivamente como un Manual de Usuario enfocado en la operación práctica. Si deseas consultar los detalles técnicos del despliegue, comandos avanzados o el proceso completo de configuración desde cero, por favor remítete a la Guía de Implementación, donde se encuentra toda la documentación técnica detallada de forma exhaustiva. [https://servergerapi.notion.site/Gu-a-de-Implementaci-n-Servidor-Minecraft-Java-Bedrock-a6ea90fe4b4d4bb3be1cd23b60c13b5d?source=copy_link]
+Nota para el lector: Este documento funciona exclusivamente como un Manual de Usuario enfocado en la operación práctica. Si deseas consultar los detalles técnicos del despliegue, comandos avanzados o el proceso completo de configuración desde cero, por favor remítete a la Guía de Implementación, donde se encuentra toda la documentación técnica detallada de forma exhaustiva. [Guía de Implementación](https://servergerapi.notion.site/Gu-a-de-Implementaci-n-Servidor-Minecraft-Java-Bedrock-a6ea90fe4b4d4bb3be1cd23b60c13b5d?source=copy_link)
 
 2.1. Ficha de Credenciales del Servidor (Confidencial)
 Para poder operar el servidor y conectarte a la red privada, el administrador del sistema te habrá proporcionado de forma privada una llave maestra de acceso que consta de las siguientes credenciales: 
