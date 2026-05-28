@@ -32,8 +32,9 @@ Nota para el lector: Este documento funciona exclusivamente como un Manual de Us
 El dispositivo se entrega completamente configurado dentro de su carcasa de protección. Para encenderlo por primera vez, sigue estos pasos:
 
 Conecta un cable de red Ethernet desde cualquiera de los puertos LAN libres de tu router doméstico al puerto Ethernet de la Raspberry Pi. Esto garantizará la máxima estabilidad y velocidad para el servidor.
-    * Para conectar tu Raspberry Pi a una red cableada, inserta un cable Ethernet en el puerto Ethernet de tu Raspberry Pi hasta que oigas un clic. Si tu modelo de       Raspberry Pi no incluye un puerto Ethernet, puedes usar un adaptador Ethernet USB.
-      <img width="700" height="466" alt="ETHERNET" src="https://github.com/user-attachments/assets/200082ec-1459-4e1d-9919-b0210f08254b" />
+    * Para conectar tu Raspberry Pi a una red cableada, inserta un cable Ethernet en el puerto Ethernet de tu Raspberry Pi hasta que oigas un clic. Si tu modelo de       Raspberry Pi no incluye un puerto Ethernet, puedes usar un adaptador Ethernet USB. 
+
+<img width="700" height="466" alt="ETHERNET" src="https://github.com/user-attachments/assets/200082ec-1459-4e1d-9919-b0210f08254b" />
 
 
 Conecte el otro extremo del cable a un puerto de su concentrador, conmutador o enrutador de red. Raspberry Pi OS se conectará automáticamente a la red.
