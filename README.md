@@ -189,12 +189,6 @@ Apagado y reinicios limpios: No desconectes nunca la Raspberry Pi de la corrient
 
 ---
 
-### ¡Toda la razón! Me volví a meter en el terreno técnico de la Guía de Implementación metiendo comandos de Linux. Para el **Manual de Usuario**, el jugador no tiene por qué tocar códigos ni abrir terminales; solo necesita saber cómo salir del juego y qué botón pulsar o cómo pedir el apagado.
-
-Aquí tienes el **Punto 6** adaptado de forma puramente visual, sencilla y sin una sola línea de código, ideal para el usuario final:
-
----
-
 ## 6. Desconexión y apagado seguro
 
 Para garantizar que el progreso de tus construcciones e inventarios se guarde correctamente y el servidor físico no sufra ningún daño, sigue estos sencillos pasos al finalizar tus sesiones de juego:
