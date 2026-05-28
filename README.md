@@ -23,15 +23,46 @@ El servidor ya viene listo para funcionar, por lo que no es necesario instalar n
 
 ---
 
-### 2. Puesta en marcha
+### 2. 2. Puesta en marcha
+En esta sección se describen los pasos que debes seguir para preparar tu entorno doméstico e instalar las herramientas necesarias en tu ordenador antes de proceder a iniciar el servidor o conectarte al juego.
 
-Para comenzar a utilizar el servidor:
+Nota para el lector: Este documento funciona exclusivamente como un Manual de Usuario enfocado en la operación práctica. Si deseas consultar los detalles técnicos del despliegue, comandos avanzados o el proceso completo de configuración desde cero, por favor remítete a la Guía de Implementación, donde se encuentra toda la documentación técnica detallada de forma exhaustiva.
 
-1. Conectar la Raspberry Pi a la corriente  
-2. Conectarla al router mediante cable Ethernet  
-3. Esperar aproximadamente 60 segundos  
+2.1. Conexión física del hardware
+El dispositivo se entrega completamente configurado dentro de su carcasa de protección. Para encenderlo por primera vez, sigue estos pasos:
 
-El servidor se iniciará automáticamente.
+Conecta un cable de red Ethernet desde cualquiera de los puertos LAN libres de tu router doméstico al puerto Ethernet de la Raspberry Pi. Esto garantizará la máxima estabilidad y velocidad para el servidor.
+    * Para conectar tu Raspberry Pi a una red cableada, inserta un cable Ethernet en el puerto Ethernet de tu Raspberry Pi hasta que oigas un clic. Si tu modelo de       Raspberry Pi no incluye un puerto Ethernet, puedes usar un adaptador Ethernet USB.
+      <img width="700" height="466" alt="ETHERNET" src="https://github.com/user-attachments/assets/200082ec-1459-4e1d-9919-b0210f08254b" />
+
+
+Conecte el otro extremo del cable a un puerto de su concentrador, conmutador o enrutador de red. Raspberry Pi OS se conectará automáticamente a la red.
+
+Para extraer el cable Ethernet, presione el clip situado en la parte inferior del conector y deslice suavemente el cable para extraerlo del puerto.
+
+Conecta el cable de la fuente de alimentación oficial al puerto USB-C de la Raspberry Pi y enchúfalo a la toma de corriente. El dispositivo se iniciará de forma automática.
+
+En la parte trasera de la carcasa encontrarás una etiqueta adherida con la Dirección IP Local fija que tiene asignada el dispositivo (por ejemplo: 192.168.1.50).
+
+Nota: Esta dirección IP es estrictamente local. Solo funcionará para los ordenadores y dispositivos que estén conectados al mismo Wi-Fi o router de tu casa.
+
+2.2. Instalación de herramientas de administración remota (SSH)
+Para poder gestionar el servidor en el futuro (por ejemplo, para mandarle comandos o apagarlo de forma segura sin dañar el sistema operativo), necesitas tener preparado un cliente SSH en tu ordenador habitual. Dependiendo de tu sistema operativo, realiza la siguiente preparación:
+
+Si utilizas Windows (Instalación de PuTTY):
+
+Abre tu navegador web y descarga el instalador oficial de PuTTY desde su página web (https://www.putty.org/).
+
+Ejecuta el archivo descargado y sigue el asistente de instalación dejando las opciones que vienen por defecto.
+
+Una vez finalizado el proceso, ya tendrás la herramienta disponible en el menú de inicio de Windows para cuando necesites usarla en los siguientes apartados.
+
+Si utilizas Linux (Uso de la Terminal nativa):
+No necesitas instalar ningún software adicional. Los sistemas operativos basados en Linux cuentan con un cliente SSH integrado directamente en el sistema.
+
+Simplemente localiza y abre la aplicación Terminal (puedes usar el atajo rápido Ctrl + Alt + T).
+
+Mantén la ventana abierta para comprobar que responde correctamente a los comandos.
 
 ---
 
