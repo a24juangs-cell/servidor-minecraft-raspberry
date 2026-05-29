@@ -82,6 +82,7 @@ Mantén la ventana abierta para comprobar que responde correctamente a los coman
 Para poder entrar a jugar, asegúrate de tener la aplicación de Tailscale encendida en tu dispositivo y el servidor físico conectado. Dependiendo de la versión de Minecraft que utilices (Bedrock o Java), sigue los pasos correspondientes:
 
 3.1. Si juegas en Minecraft Bedrock (Móviles, Tablets y Consolas)
+
 A) Si estás en la misma casa que el servidor (Red Local)
 Si estás conectado al mismo Wi-Fi o router que la Raspberry Pi, entrar es automático y no necesitas escribir ninguna dirección IP:
 
