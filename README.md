@@ -84,6 +84,7 @@ Para poder entrar a jugar, asegúrate de tener la aplicación de Tailscale encen
 3.1. Si juegas en Minecraft Bedrock (Móviles, Tablets y Consolas)
 
 A) Si estás en la misma casa que el servidor (Red Local)
+
 Si estás conectado al mismo Wi-Fi o router que la Raspberry Pi, entrar es automático y no necesitas escribir ninguna dirección IP:
 
 Abre Minecraft en tu dispositivo y pulsa en Jugar.
@@ -96,7 +97,9 @@ Verás que el servidor aparece ahí solo con el nombre del mundo.
 
 ¡Simplemente pulsa sobre él y entrarás directo a la partida!
 
+
 B) Si vas a jugar desde fuera de casa (Solo para Móviles y Tablets)
+
 Si vas a jugar usando tus datos móviles o desde el Wi-Fi de otra casa, Minecraft bloquea estas conexiones por seguridad. Para solucionarlo, haz este pequeño ajuste en tu juego por única vez:
 
 Abre Minecraft, entra en el menú de Ajustes y selecciona el apartado Perfil (en algunos dispositivos se llama Cuenta).
@@ -107,7 +110,9 @@ En la pestaña de "Configuración de red", asegúrate de marcar la opción "Con 
 
 Nota: Si juegas desde un ordenador con Windows 10 o Windows 11, puedes saltarte este paso; en el ordenador funciona a la primera sin tocar nada.
 
+
 C) Pasos para conectarte (Fuera de casa / Con la app de Tailscale)
+
 Una vez hecho el ajuste anterior, sigue estos pasos para añadir el servidor a tu lista de juego:
 
 Abre Minecraft Bedrock y haz clic en el botón Jugar.
@@ -138,6 +143,7 @@ Con estos pasos, el juego iniciará la carga de texturas y te conectará de form
 
 
 3.2. Si juegas en Minecraft Java Edition (Ordenadores)
+
 Si utilizas la versión tradicional para ordenadores (Windows, Mac o Linux), sigue estos pasos utilizando la red de Tailscale:
 
 Acceso al menú: Inicia el juego y, en el menú principal, haz clic en el botón Multijugador.
