@@ -28,20 +28,7 @@ En esta sección se describen los pasos que debes seguir para preparar tu entorn
 
 Nota para el lector: Este documento funciona exclusivamente como un Manual de Usuario enfocado en la operación práctica. Si deseas consultar los detalles técnicos del despliegue, comandos avanzados o el proceso completo de configuración desde cero, por favor remítete a la Guía de Implementación, donde se encuentra toda la documentación técnica detallada de forma exhaustiva. [Guía de Implementación](https://servergerapi.notion.site/Gu-a-de-Implementaci-n-Servidor-Minecraft-Java-Bedrock-a6ea90fe4b4d4bb3be1cd23b60c13b5d?source=copy_link)
 
-2.1. Ficha de Credenciales del Servidor (Confidencial)
-Para poder operar el servidor y conectarte a la red privada, el administrador del sistema te habrá proporcionado de forma privada una llave maestra de acceso que consta de las siguientes credenciales: 
-
-Cuenta de Gmail Autorizada: [ejemplo@gmail.com]
-
-Contraseña de Acceso: [••••••••••••]
-
-Usuario de Administración (SSH): [nombre_usuario]
-
-Contraseña de Administración (SSH): [contraseña_servidor]
-
-IMPORTANTE: Guarda estos datos en un lugar seguro. Los necesitarás obligatoriamente en los pasos 2.3 (para vincular tu aplicación de Tailscale) y 7.1 (para acceder a la consola y apagar el dispositivo de forma segura).
-
-2.2. Conexión física del hardware
+2.1. Conexión física del hardware
 El dispositivo se entrega completamente configurado dentro de su carcasa de protección. Para encenderlo por primera vez, sigue estos pasos:
 
 Conecta el cable de la fuente de alimentación oficial al puerto USB-C de la Raspberry Pi y enchúfalo a la toma de corriente. El dispositivo se iniciará de forma automática.
@@ -57,21 +44,21 @@ Conecta un cable de red Ethernet desde cualquiera de los puertos LAN libres de t
 
 Para extraer el cable Ethernet, presione el clip situado en la parte inferior del conector y deslice suavemente el cable para extraerlo del puerto.
 
-Localiza la Dirección IP de Tailscale asignada de forma fija al dispositivo (por ejemplo: 100.70.80.90). Esta dirección viene anotada en la etiqueta física adherida a la parte trasera de la carcasa. Esta será la dirección IP permanente que utilizarás siempre para conectarte, sin importar a qué router esté conectada la placa.
+Localiza la Dirección IP de Tailscale asignada cuando se instala Tailscale en la Raspberry y registras con tu cuenta gmail, esa será la IP del servidor en Tailscale.
 
-2.3. Preparación de la Red Privada (Tailscale)
-Para garantizar la máxima seguridad y privacidad, este servidor opera de forma exclusiva dentro de una red privada virtual cifrada mediante Tailscale. Antes de proceder a abrir Minecraft, es obligatorio que prepares tu ordenador o dispositivo para que el sistema le permita el acceso a esta red segura:
+2.2. Preparación de la Red Privada (Tailscale)
+Antes de proceder a abrir Minecraft:
 
 Descarga e instala la aplicación oficial de Tailscale en tu ordenador habitual o en tu dispositivo móvil desde su página web (https://tailscale.com/download). Está disponible para sistemas Windows, Linux, macOS, Android e iOS.
 
-Inicia sesión en la aplicación instalada utilizando la cuenta de Gmail vinculada y autorizada para el servidor (indicada en la Ficha de Credenciales del punto 2.1).
+Inicia sesión en la aplicación instalada utilizando tu cuenta de Gmail.
 
 Asegúrate de que el interruptor de la aplicación de Tailscale aparezca en estado Connected (Conectado).
 
-💡 Acceso Multidispositivo Integrado: La cuenta de Gmail autorizada funciona como una llave maestra. Puedes iniciar sesión con este mismo correo electrónico en todos los dispositivos que quieras (como tu ordenador de juegos y tu teléfono móvil) simultáneamente. En cuanto lo hagas, todos ellos quedarán interconectados de forma segura y directa a la Raspberry Pi a través de internet, permitiéndote jugar o administrar el servidor desde cualquier lugar del mundo de manera inmediata.
+💡Puedes iniciar sesión con este mismo correo electrónico en todos los dispositivos que quieras (como tu ordenador de juegos y tu teléfono móvil) simultáneamente. En cuanto lo hagas, todos ellos quedarán interconectados de forma segura y directa a la Raspberry Pi a través de internet, permitiéndote jugar o administrar el servidor desde cualquier lugar del mundo de manera inmediata.
 
 
-2.2. Instalación de herramientas de administración remota (SSH)
+2.3. Instalación de herramientas de administración remota (SSH)
 Para poder gestionar el servidor en el futuro (por ejemplo, para mandarle comandos o apagarlo de forma segura sin dañar el sistema operativo), necesitas tener preparado un cliente SSH en tu ordenador habitual. Dependiendo de tu sistema operativo, realiza la siguiente preparación:
 
 Si utilizas Windows (Instalación de PuTTY):
@@ -92,21 +79,35 @@ Mantén la ventana abierta para comprobar que responde correctamente a los coman
 ---
 
 ### 3. Cómo conectarse al servidor (Minecraft Bedrock)
-Con la aplicación de Tailscale activa en tu dispositivo y el servidor físico encendido, la conexión en la versión Bedrock es directa, fija y permanente. Sigue estos pasos para añadir el servidor a tu lista de juego.
+Para poder entrar a jugar, asegúrate de tener la aplicación de Tailscale encendida en tu dispositivo y el servidor físico conectado. Dependiendo de la versión de Minecraft que utilices (Bedrock o Java), sigue los pasos correspondientes:
 
-3.1. Configuración inicial de red (Solo para Móviles y Tablets Android/iOS)
-Debido a las políticas de seguridad internas de Minecraft Bedrock en dispositivos móviles, el juego restringe por defecto las conexiones a redes virtuales externas. Si vas a jugar desde un teléfono o una tablet, debes realizar este ajuste técnico por única vez antes de intentar conectar:
+3.1. Si juegas en Minecraft Bedrock (Móviles, Tablets y Consolas)
+A) Si estás en la misma casa que el servidor (Red Local)
+Si estás conectado al mismo Wi-Fi o router que la Raspberry Pi, entrar es automático y no necesitas escribir ninguna dirección IP:
 
-Abre Minecraft Bedrock en tu dispositivo, entra en el menú de Ajustes y selecciona el apartado Perfil (en algunas versiones aparece como Cuenta).
+Abre Minecraft en tu dispositivo y pulsa en Jugar.
 
-Localiza la opción "Usar datos móviles" (o Permitir datos celulares) y actívala.
+Entra en la pestaña de Amigos.
+
+Baja hasta el final de la pantalla y busca la sección llamada "Partidas en LAN".
+
+Verás que el servidor aparece ahí solo con el nombre del mundo.
+
+¡Simplemente pulsa sobre él y entrarás directo a la partida!
+
+B) Si vas a jugar desde fuera de casa (Solo para Móviles y Tablets)
+Si vas a jugar usando tus datos móviles o desde el Wi-Fi de otra casa, Minecraft bloquea estas conexiones por seguridad. Para solucionarlo, haz este pequeño ajuste en tu juego por única vez:
+
+Abre Minecraft, entra en el menú de Ajustes y selecciona el apartado Perfil (en algunos dispositivos se llama Cuenta).
+
+Busca la opción "Usar datos móviles" (o Permitir datos celulares) y actívala.
 
 En la pestaña de "Configuración de red", asegúrate de marcar la opción "Con Wi-Fi o datos móviles".
 
-Nota: Si juegas desde un ordenador con Windows 10 o Windows 11, puedes saltarte este paso por completo, ya que el sistema de escritorio permite la conexión a través de Tailscale de forma nativa sin restricciones.
+Nota: Si juegas desde un ordenador con Windows 10 o Windows 11, puedes saltarte este paso; en el ordenador funciona a la primera sin tocar nada.
 
-3.2. Procedimiento de conexión en el juego
-Una vez verificado el paso anterior, realiza el siguiente procedimiento para unirte al mundo:
+C) Pasos para conectarte (Fuera de casa / Con la app de Tailscale)
+Una vez hecho el ajuste anterior, sigue estos pasos para añadir el servidor a tu lista de juego:
 
 Abre Minecraft Bedrock y haz clic en el botón Jugar.
 
@@ -126,17 +127,17 @@ Rellena los tres campos obligatorios que te solicita el formulario con los sigui
 
 Nombre del servidor: Introduce el nombre identificativo que prefieras (por ejemplo: Mi Servidor Pi).
 
-Dirección IP / Dirección: Introduce la IP de Tailscale fija del servidor que viene anotada en la etiqueta de la carcasa trasera de la Raspberry Pi (por ejemplo: 100.70.80.90).
+Dirección IP / Dirección: Introduce la IP de Tailscale que la app te dió al vinvularla con el correo electrónico.
 
 Puerto: Mantén el puerto por defecto de Minecraft Bedrock, que es el 19132.
 
 Haz clic en el botón Guardar (esto fijará el servidor en tu lista para siempre) y, finalmente, selecciónalo y pulsa en Entrar al servidor.
 
-Con estos pasos, el juego iniciará la carga de texturas y te conectará de forma segura a la partida alojada en la Raspberry Pi. (Si necesitas revisar los parámetros técnicos del puerto de escucha o la asignación de sockets del servidor Bedrock, puedes consultar los anexos técnicos en la Guía de Implementación).
+Con estos pasos, el juego iniciará la carga de texturas y te conectará de forma segura a la partida alojada en la Raspberry Pi.
 
 
-3.3. Procedimiento de conexión para Minecraft Java Edition
-Si en lugar de Bedrock vas a conectarte desde la versión de ordenadores tradicionales (Windows, Mac o Linux), el procedimiento guiado a través de la red de Tailscale es el siguiente:
+3.2. Si juegas en Minecraft Java Edition (Ordenadores)
+Si utilizas la versión tradicional para ordenadores (Windows, Mac o Linux), sigue estos pasos utilizando la red de Tailscale:
 
 Acceso al menú: Inicia el juego y, en el menú principal, haz clic en el botón Multijugador.
 
@@ -155,11 +156,9 @@ Introducir datos de conexión: Rellena los dos campos obligatorios que te solici
 
 Nombre del servidor: Introduce el nombre identificativo que prefieras (por ejemplo: Mi Servidor Java).
 
-Dirección del servidor: Introduce la IP de Tailscale fija del servidor anotada en la etiqueta de la carcasa trasera de la Raspberry Pi (por ejemplo: 100.70.80.90). En Java Edition no es necesario añadir ningún puerto al final de la dirección.
+Dirección del servidor: Introduce la IP de Tailscale. En Java Edition no es necesario añadir ningún puerto al final de la dirección.
 
-Entrar al mundo: Haz clic en el botón Aceptar, selecciona el servidor que acaba de aparecer en tu lista y pulsa en Entrar al servidor.
-
-Con estos pasos completados en cualquiera de las ediciones, el juego cargará el entorno y te conectará de forma segura a la partida alojada en la Raspberry Pi. (Si necesitas revisar parámetros técnicos avanzados del servidor, como los archivos server.properties o la asignación de sockets, dispones de toda la documentación detallada en la Guía de Implementación).
+¡A jugar!: Haz clic en el botón Aceptar, selecciona el servidor que acaba de aparecer en tu lista y pulsa en Entrar al servidor.
 
 ---
 
@@ -201,10 +200,10 @@ Para garantizar que el progreso de tus construcciones e inventarios se guarde co
 
 ### 6.2. Apagado físico de la Raspberry Pi
 
-Si eres el dueño del servidor y necesitas apagar por completo el equipo físico (por ejemplo, para moverlo de sitio o limpiarlo), realiza el procedimiento en este orden:
+Necesitas apagar por completo el equipo físico (por ejemplo, para moverlo de sitio o limpiarlo), realiza el procedimiento en este orden:
 
 1. Asegúrate de que **ningún jugador** esté dentro del mundo para evitar pérdidas de datos de última hora.
-2. Si has configurado un botón de apagado físico en la carcasa de la Raspberry Pi, presiónalo una vez. Si no lo tienes, el administrador del sistema deberá realizar el apagado controlado de forma remota.
+2. Apagado controlado de forma remota.
 3. Observa las luces de la Raspberry Pi: verás una **luz verde** parpadear rápidamente, lo que significa que el servidor está guardando los últimos archivos en el disco.
 4. **Espera obligatoria:** No retires el cable de corriente mientras la luz verde parpadee. Una vez que el parpadeo se detenga por completo y solo quede la luz roja fija (o se apaguen ambas), podrás desenchufar el cable de alimentación de la pared con total seguridad.
 
@@ -226,7 +225,7 @@ Solución desde el juego: Ve a Ajustes, selecciona Ajustes de chat y asegúrate 
 7.3. No aparecen monstruos ni animales en el mundo, o el juego es demasiado difícil
 Causa: La dificultad del mundo no está ajustada al gusto de los jugadores de la sesión.
 
-Solución desde el juego (Solo Administradores): Abre el chat de texto dentro de la partida y escribe directamente el comando /difficulty peaceful (para modo pacífico), /difficulty easy (fácil) o /difficulty normal. La dificultad del servidor cambiará en tiempo real sin necesidad de reiniciar.
+Solución desde el juego: Abre el chat de texto dentro de la partida y escribe directamente el comando /difficulty peaceful (para modo pacífico), /difficulty easy (fácil) o /difficulty normal. La dificultad del servidor cambiará en tiempo real sin necesidad de reiniciar.
 
 ---
 
@@ -242,17 +241,13 @@ Mantener el dispositivo bien ventilado: La Raspberry Pi procesa mucha informaci�
 ---
 
 ### 9. Soporte
-En caso de experimentar problemas técnicos complejos que no se hayan podido resolver a través de los ajustes internos de Minecraft (como caídas del servidor, problemas con la dirección IP o errores de conexión persistentes), debes ponerte en contacto con el administrador del sistema.
+En caso de experimentar problemas técnicos complejos que no se hayan podido resolver a través de los ajustes internos de Minecraft (como caídas del servidor, problemas con la dirección IP o errores de conexión persistentes), debes ponerte en contacto:
 
 Para reportar una incidencia, utiliza cualquiera de los siguientes canales oficiales:
 
 Correo electrónico de soporte: gerardo025s@gmail.com
 
-Canal de comunicación directa: Grupo de Discord Servidores Minecraft.discord
-
 Información necesaria para el reporte: Al enviar tu mensaje, indica tu nombre de usuario en el juego (Gamertag) y, si es posible, una captura de pantalla con el mensaje de error exacto que te muestra Minecraft.
-
-El administrador se encargará de revisar el estado físico de la Raspberry Pi y de restablecer el servicio a la mayor brevedad posible.
 
 ---
 
