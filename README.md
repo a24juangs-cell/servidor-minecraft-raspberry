@@ -1,5 +1,6 @@
 # servidor-minecraft-raspberry
-Manual del usuario. Proyecto Servidor Minecraft
+Manual del usuario. 
+Proyecto Servidor Minecraft
 
 # 🖥️ Servidor de Minecraft en Raspberry Pi
 
