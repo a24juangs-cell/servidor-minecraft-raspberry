@@ -196,7 +196,7 @@ Conexión por cable (Raspberry Pi): Siempre que sea posible, mantén la Raspberr
 
 Límite de jugadores simultáneos: El hardware de la Raspberry Pi es compacto. Para mantener un rendimiento óptimo y sin ralentizaciones, se recomienda un máximo de 6 a 8 jugadores conectados al mismo tiempo aunque está configurado para 12 que aún así sigue dando un buen rendimiento.
 
-Distancia de simulación moderada: En los ajustes del servidor (o desde el menú de juego si eres administrador), mantén la distancia de renderizado de fragmentos (chunks) entre 4 y 8. Valores más altos obligan a la placa a procesar demasiado mapa a la vez, lo que puede causar tirones.
+Distancia de simulación moderada: En los ajustes del servidor, mantén la distancia de renderizado de fragmentos (chunks) entre 4 y 8. Valores más altos obligan a la placa a procesar demasiado mapa a la vez, lo que puede causar tirones.
 
 Apagado y reinicios limpios: No desconectes nunca la Raspberry Pi de la corriente de golpe. Si necesitas apagarla, hazlo siempre de forma segura a través de los comandos de la consola para evitar que el mapa de juego se corrompa. 
 
