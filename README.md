@@ -49,8 +49,9 @@ Para extraer el cable Ethernet, presione el clip situado en la parte inferior de
 2.2. Preparación de la Red Privada (Tailscale)
 Antes de proceder a abrir Minecraft:
 
-Localiza la Dirección IP de Tailscale asignada cuando se instala Tailscale en la Raspberry y registras tu cuenta gmail, esa es la IP del servidor en Tailscale.
-Entrar con SSH a la Raspberry se coloca el comando "tailscale ip" y dará la IP tailscale asignada a la Raspberry.
+Localiza la dirección IP que se asigna al instalar y registrar una cuenta Gmail (personal o dedicada directamente al servidor) en Tailscale en la Raspberry y esa será la IP del servidor en Tailscale.
+
+Entrar con SSH a la Raspberry, se coloca el comando "tailscale ip" y dará la IP Tailscale asignada a la Raspberry.
 Hecho esto proseguimos.
 
 Descarga e instala la aplicación oficial de Tailscale en tu ordenador habitual o en tu dispositivo móvil desde su página web (https://tailscale.com/download). Está disponible para sistemas Windows, Linux, macOS, Android e iOS.
